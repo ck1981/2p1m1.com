@@ -1,0 +1,28 @@
+# Documentation: https://github.com/roots/trellis#wordpress-sites
+wordpress_sites:
+  2p1m1.com:
+    site_hosts:
+      - 2p1m1.dev
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    repo: git@github.com:roots/bedrock.git
+    site_install: true
+    site_title: 2p1m1 Site
+    admin_user: admin
+    admin_password: admin
+    admin_email: admin@2p1m1.dev
+    multisite:
+      enabled: false
+      subdomains: false
+    ssl:
+      enabled: false
+    cache:
+      enabled: false
+      duration: 30s
+    system_cron: true
+    env:
+      wp_home: http://2p1m1.dev
+      wp_siteurl: http://2p1m1.dev/wp
+      wp_env: development
+      db_name: 2p1m1_dev
+      db_user: 2p1m1_dbuser
+      db_password: 2p1m1_dbpassword
